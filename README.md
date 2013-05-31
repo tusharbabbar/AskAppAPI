@@ -64,9 +64,9 @@ The error codes raised by every endpoint are documented in the respective sectio
 
 ### JSON Keys Meaning ###
 
-1. **error(boolean): **Flag signfying if the request resulted in an error not. The android app can continue with normal workflow if the value of this key is "false" but would have to take error handling measures if the value is "true".
-2. **error_code (integer): **Error code. (the various error codes raised by every endpoint are explained in the respective sections of the endpoints.
-3. **error_message (string): **Human readable error message.
+1. **error(boolean):**Flag signfying if the request resulted in an error not. The android app can continue with normal workflow if the value of this key is "false" but would have to take error handling measures if the value is "true".
+2. **error_code (integer):**Error code. (the various error codes raised by every endpoint are explained in the respective sections of the endpoints.
+3. **error_message (string):**Human readable error message.
 
 
 
@@ -80,8 +80,8 @@ Various endpoints with the HTTP verb they support are explained in this section
 
 #### Parameters ####
 
-1. **fb_user_id (string): ** - Facebook User ID.
-2. **fb_access_token (string): ** - Facebook Access Token
+1. **fb_user_id (string):** - Facebook User ID.
+2. **fb_access_token (string):** - Facebook Access Token
 
 #### Sample Response ####
 
@@ -96,16 +96,16 @@ Various endpoints with the HTTP verb they support are explained in this section
 
 #### Response Meaning ####
 
-1. **error (boolean): **Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
-2. **success (boolean): **Simple flag telling if the request was a success or not. (Frankly there is not practical purpose of this one with the existence of the error flag.)
-3. **new_registration (boolean): **Flag telling if the current request resulted in a new user registration or the given user already existed in the system.
+1. **error (boolean):**Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
+2. **success (boolean):**Simple flag telling if the request was a success or not. (Frankly there is not practical purpose of this one with the existence of the error flag.)
+3. **new_registration (boolean):**Flag telling if the current request resulted in a new user registration or the given user already existed in the system.
 
 
 #### Errors Raised ####
 
-1. **1221: **When the access token provided is not valid.
-2. **1222: **When the access token provided is valid but does not match with the given user ID.
-3. **500: **: Internal server error.
+1. **1221:**When the access token provided is not valid.
+2. **1222:**When the access token provided is valid but does not match with the given user ID.
+3. **500:**: Internal server error.
 
 ### GET /feed [AUTH REQUIRED] ###
 
@@ -143,21 +143,21 @@ Various endpoints with the HTTP verb they support are explained in this section
 ```
 #### Response Meaning ####
 
-1. **error (boolean): **Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
-2. **skip (integer): **Value of the skip parameter provided.
-3. **limit (integer): **Value of the limit parameter provided.
-4. **result (array): **Array of feeds to be shown to the user.
-5. **asker_name (string): **Name of the person who asked the question.
-6. **asker_pic (string): **Url of the picture of the asker.
-7. **asker_id (string): **Id of the asker.
-8. **question_content (string): **question asked to the user.
+1. **error (boolean):**Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
+2. **skip (integer):**Value of the skip parameter provided.
+3. **limit (integer):**Value of the limit parameter provided.
+4. **result (array):**Array of feeds to be shown to the user.
+5. **asker_name (string):**Name of the person who asked the question.
+6. **asker_pic (string):**Url of the picture of the asker.
+7. **asker_id (string):**Id of the asker.
+8. **question_content (string):**question asked to the user.
 9. **answer_content (string) :** answer given to that question.
-10. **time (string): **answer time.
-11. **score (integer): **like count.
-12. **replier_pic (string): **Url of the picture answered the question.
-13. **replier_name (string): ** Name of the replier.
-14. **replier_id (string): **Id of the replier.
-15. **count (integer): **The number of feeds in result
+10. **time (string):**answer time.
+11. **score (integer):**like count.
+12. **replier_pic (string):**Url of the picture answered the question.
+13. **replier_name (string):** Name of the replier.
+14. **replier_id (string):**Id of the replier.
+15. **count (integer):**The number of feeds in result
 
 ### GET /trending [AUTH Required] ###
 
@@ -194,17 +194,17 @@ Various endpoints with the HTTP verb they support are explained in this section
 
 #### Response Meaning ####
 
-1. **error (boolean): **Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
-2. **skip (integer): **Value of the skip parameter provided.
-3. **limit (integer): **Value of the limit parameter provided.
-4. **result (array): **Array of feeds to be shown to the user.
-5. **user_id (string): **Id of the user.
-6. **user_name (string): **Name of the user.
-7. **user_pic (string): **Url of the picture of the user.
-8. **ans_count (integer): **Number of answers given by the user.
-9. **likes_count (interger): **Total number of likes on all answers given by the user.
-10. **followers_count (integer): **Total number of people followning the user.
-11. **count (integer): **The number of feeds in result
+1. **error (boolean):**Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
+2. **skip (integer):**Value of the skip parameter provided.
+3. **limit (integer):**Value of the limit parameter provided.
+4. **result (array):**Array of feeds to be shown to the user.
+5. **user_id (string):**Id of the user.
+6. **user_name (string):**Name of the user.
+7. **user_pic (string):**Url of the picture of the user.
+8. **ans_count (integer):**Number of answers given by the user.
+9. **likes_count (interger):**Total number of likes on all answers given by the user.
+10. **followers_count (integer):**Total number of people followning the user.
+11. **count (integer):**The number of feeds in result
 
 ### GET /user-profile [AUTH Required] ###
 
@@ -214,7 +214,7 @@ Various endpoints with the HTTP verb they support are explained in this section
 
 1.  **fb_user_id (string) :** - Facebook User Id.
 2.  **fb_access_token (string) :** - Facebook Access Token.
-3.  **other_user_id (string) : ** - User Id of the other user whose profile has to be seen.
+3.  **other_user_id (string) :** - User Id of the other user whose profile has to be seen.
 
 #### Sample Response ####
 
@@ -246,15 +246,15 @@ Various endpoints with the HTTP verb they support are explained in this section
 ```
 #### Response Meaning ####
   
-1. **error (boolean): **Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
-2. **user_id (string): **Id of the user.
-3. **user_name (string): **Name of the user.
-4. **user_pic (string): **Url of the picture of the user.
-5. **ans_count (integer): **Number of answers given by the user.
-6. **likes_count (interger): **Total number of likes on all answers given by the user.
-7. **followers_count (integer): **Total number of people followning the user.
-8. **answers (array): **This array will contain the answers given by the user visited.
-9. **count (integer): **The number of feeds in result
+1. **error (boolean):**Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
+2. **user_id (string):**Id of the user.
+3. **user_name (string):**Name of the user.
+4. **user_pic (string):**Url of the picture of the user.
+5. **ans_count (integer):**Number of answers given by the user.
+6. **likes_count (interger):**Total number of likes on all answers given by the user.
+7. **followers_count (integer):**Total number of people followning the user.
+8. **answers (array):**This array will contain the answers given by the user visited.
+9. **count (integer):**The number of feeds in result
 
 ### GET /followers ; GET /following [AUTH Required] ###
   
@@ -289,17 +289,17 @@ Various endpoints with the HTTP verb they support are explained in this section
 ```  
 #### Response Meaning ####
 
-1. **error (boolean): **Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
-2. **skip (integer): **Value of the skip parameter provided.
-3. **limit (integer): **Value of the limit parameter provided.
-4. **result (array): **Array of feeds to be shown to the user.
-5. **user_id (string): **Id of the user.
-6. **user_name (string): **Name of the user.
-7. **user_pic (string): **Url of the picture of the user.
-8. **ans_count (integer): **Number of answers given by the user.
-9. **likes_count (interger): **Total number of likes on all answers given by the user.
-10. **followers_count (integer): **Total number of people followning the user.
-11. **count (integer): **The number of feeds in result
+1. **error (boolean):**Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
+2. **skip (integer):**Value of the skip parameter provided.
+3. **limit (integer):**Value of the limit parameter provided.
+4. **result (array):**Array of feeds to be shown to the user.
+5. **user_id (string):**Id of the user.
+6. **user_name (string):**Name of the user.
+7. **user_pic (string):**Url of the picture of the user.
+8. **ans_count (integer):**Number of answers given by the user.
+9. **likes_count (interger):**Total number of likes on all answers given by the user.
+10. **followers_count (integer):**Total number of people followning the user.
+11. **count (integer):**The number of feeds in result
 
 ### GET /questions [AUTH Required] ###
 
@@ -335,18 +335,18 @@ Various endpoints with the HTTP verb they support are explained in this section
 
 #### Response Meaning ####
 
-1. **error (boolean): **Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
-2. **skip (integer): **Value of the skip parameter provided.
-3. **limit (integer): **Value of the limit parameter provided.
-4. **result (array): **Array of feeds to be shown to the user.
-5. **count (integer): **The number of feeds in result.
-6. **questions (array): **Array of questions asked to the logged-in user.
-7. **question_id (string): **Id of the question asked
-8. **question_content (string): **Question asked to the logged-in user.
-9. **question_time (string): **Time when the question is asked. 
-10. **asker_id (string): **Id of the person who asked the question.
-11. **asker_name (string): **Name of the asker.
-12. **asker_pic (string): **URL of the picture of the asker.
+1. **error (boolean):**Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
+2. **skip (integer):**Value of the skip parameter provided.
+3. **limit (integer):**Value of the limit parameter provided.
+4. **result (array):**Array of feeds to be shown to the user.
+5. **count (integer):**The number of feeds in result.
+6. **questions (array):**Array of questions asked to the logged-in user.
+7. **question_id (string):**Id of the question asked
+8. **question_content (string):**Question asked to the logged-in user.
+9. **question_time (string):**Time when the question is asked. 
+10. **asker_id (string):**Id of the person who asked the question.
+11. **asker_name (string):**Name of the asker.
+12. **asker_pic (string):**URL of the picture of the asker.
 
 ### GET /random-question [AUTH Required] ###
 
@@ -369,10 +369,10 @@ Various endpoints with the HTTP verb they support are explained in this section
 ```
 #### Response Meaning ####
 
-1. **error (boolean): **Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
-2. **question_id (string): **Id of the question asked
-3. **question_content (string): **Question asked to the logged-in user.
-4. **question_time (string): **Time when the question is asked.
+1. **error (boolean):**Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
+2. **question_id (string):**Id of the question asked
+3. **question_content (string):**Question asked to the logged-in user.
+4. **question_time (string):**Time when the question is asked.
 
 ### POST /ask-question [AUTH Required] ###
 
@@ -397,8 +397,8 @@ Various endpoints with the HTTP verb they support are explained in this section
 
 #### Response Meaning ####
 
-1. **error (boolean): **Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
-2. **question_id (string): **Id of the question asked.
+1. **error (boolean):**Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
+2. **question_id (string):**Id of the question asked.
 
 ### POST /answer [AUTH Required] ###
 
@@ -409,8 +409,8 @@ Various endpoints with the HTTP verb they support are explained in this section
 
 1.  **fb_user_id (string) :** - Facebook User Id.
 2.  **fb_access_token (string) :** - Facebook Access Token.
-3.  **question_id (string): **Id of the question asked.
-4.  **answer_content (string): **Content of the answer given.
+3.  **question_id (string):**Id of the question asked.
+4.  **answer_content (string):**Content of the answer given.
 
 #### Sample Response ####
 
@@ -422,5 +422,5 @@ Various endpoints with the HTTP verb they support are explained in this section
 ```
 #### Response Meaning ####
 
-1.  **error (boolean): **Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
-2.  **question_id (string): **Id of the answer.
+1.  **error (boolean):**Flag indicating if the request resulted in an error or not. If the value is 'true' the response will also have other keys explained in the errors section.
+2.  **question_id (string):**Id of the answer.

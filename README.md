@@ -3,11 +3,6 @@ AskAppAPI
 
 Api for android app based on ask.fm
 
-AskAppAPI
-=========
-
-Api for android app based on ask.fm
-
 # [v1] API Documentation #
 
 ## Conventions ##
